@@ -1,172 +1,223 @@
-<!DOCTYPE html>    
-<html>    
-<head>    
-<title>   
-Second Example of search box   
-  </title>    
-  <style>                    
-*  
-{  
-    outline: none;  
+<! DOCTYPE html>  
+<html>  
+<head>  
+<meta charset = "utf-8">  
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">  
+        <title> Email Newsletter using CSS </title>  
+        <link rel = "stylesheet" href = "https://codepen.io/gymratpacks/pen/VKzBEp#0">  
+        <link href = 'https://fonts.googleapis.com/css?family=Nunito:400,300' rel = 'stylesheet' type = 'text/css'>  
+ <link href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel = "stylesheet">      
+<style>  
+* {  
+  margin: 0;  
+  padding: 0;  
+  box-sizing: border-box;  
 }  
-/* The following tag selector form uses one property for specifying the height of a form. */  
-  
-form  
-{  
-    height: 96px;  
+body {  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  font-family: 'Titillium Web', sans-serif;  
+  background: linear-gradient(125deg, #778beb, #f8a5c2);  
+  min-height: 100vh;  
 }  
-/* The following tag selector input use the different properties for specifying the text field. */  
-  
-input[type="text"]  
-{  
-    width: 100%;  
-    height: 80px;  
-    font-size: 40px;  
-    line-height: 1;  
+.card_container {  
+  width: 350px;  
+  background: #fff;  
+  border-radius: 15px;  
 }  
-/* The following tag selector uses the color of placeholder as orange for the input text field. */  
-input[type="text"]::placeholder  
-{  
-    color: orange;  
+.card_container .card_header {  
+  background-color: #bf5bee;  
+  background-image: linear-gradient(  
+    43deg,  
+    #bf5bee 0%,  
+    #c850c0 46%,  
+    #ffcc70 100%  
+  );  
+  padding: 4rem 1.3rem;  
+  border-radius: 15px 15px 0 0;  
+  text-align: center;  
 }  
-  
-.tb  
-{  
-    display: table;  
-    width: 100%;  
+.card_container .card_header h1 {  
+  margin: 0;  
+  padding: 0;  
+  color: #fff;  
+  margin-top: 0.6rem;  
+  font-size: 1.5rem;  
 }  
-.td  
-{  
-    display: table-cell;  
-    vertical-align: middle;  
+.card_container .card_header h1 span {  
+  text-transform: uppercase;  
 }  
-/* The following tag selector uses the different properties for specifying all the inputs and buttons used in the body tag in this html file. */  
-  
-input, button  
-{  
-    color: #fff;  
-    font-family: Arial;  
-    padding: 0;  
-    margin: 0;  
-    border: 0;  
-    background-color: transparent;  
+.card_header .text {  
+  color: #fff;  
+  font-size: 0.9rem;  
 }  
-/* the following id selector cover uses the different attribute which are used between the body tag */  
-#cover  
-{  
-    position: absolute;  
-    top: 50%;  
- width: 550px;  
-    padding: 35px;  
-    margin: -83px auto 0 auto;  
-    background-color: #ff7575;  
-    border-radius: 20px;  
-    left: 0;  
-    right: 0;  
-    box-shadow: 0 10px 40px #ff7c7c, 0 0 0 20px #ffffffeb;  
-    transform: scale(0.6);  
+.card_content {  
+  padding: 2rem;  
+  display: flex;  
+  justify-content: center;  
+  gap: 1rem;  
+    align-items:center;   
+  flex-direction: column;  
 }  
-/* The following tag selector button uses the different proprties for specifying the button on a web page. */  
-button  
-{  
-    position: relative;  
-    display: block;  
-    width: 84px;  
-    height: 96px;  
-    cursor: pointer;  
+input:focus {  
+    border: 2px solid #011936;  
+    font-weight: 600;  
 }  
-/* The following id selector uses the different properties for searching button */   
-#s-circle  
-{  
-    position: relative;  
-    top: -8px;  
-    left: 0;  
-    width: 43px;  
-    height: 43px;  
-    margin-top: 0;  
-    border-width: 15px;  
-    border: 15px solid #fff;  
-    background-color: transparent;  
-    border-radius: 50%;  
-    transition: 0.5s ease all;  
+.card_content .input-field input {  
+  width: 100%;  
+  padding: 0.8rem;  
+  border: 1px solid #ccc;  
+  border-radius: 4px;  
 }  
-button span  
-{  
-    position: absolute;  
-    top: 68px;  
-    left: 43px;  
-    display: block;  
-    width: 45px;  
-    height: 15px;  
-    background-color: transparent;  
-    border-radius: 10px;  
-    transform: rotateZ(52deg);  
-    transition: 0.5s ease all;  
+.card_content .btn {  
+  padding: 0.8rem;  
+  background-color: #bf5bee;  
+  font-family: 'Titillium Web', sans-serif;  
+    font-size: 1.4rem;  
+    font-weight: 800;  
+  background-image: linear-gradient(  
+    43deg,  
+    #bf5bee 0%,  
+    #c850c0 46%,  
+    #ffcc70 100%  
+  );  
+  border: none;  
+  outline: none;  
+  border-radius: 5px;  
+  color: #fff;  
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);  
+  transition: all 0.2s ease-in-out;  
+  cursor: pointer;  
 }  
-button span:before, button span:after  
-{  
-    content: '';  
-    position: absolute;  
-    bottom: 0;  
-    right: 0;  
-    width: 45px;  
-    height: 15px;  
-    background-color: #fff;  
-    border-radius: 10px;  
-    transform: rotateZ(0);  
-    transition: 0.5s ease all;  
+.card_content .btn:hover {  
+  box-shadow: 3px 7px 8px rgba(0, 0, 0, 0.2);  
+  cursor: pointer;  
 }  
-#s-cover:hover #s-circle  
-{  
-    top: -1px;  
-    width: 67px;  
-    height: 15px;  
-    border-width: 0;  
-    background-color: #fff;  
-    border-radius: 20px;  
+.card_content span {  
+  text-align: center;  
+  padding: 1rem 0;  
+  font-size: 0.8rem;  
+  color: gray;  
+  letter-spacing: 1px;  
 }  
-/* The following hover effect use the different properties when you take mouse to that element where thr s-cover is selector is used. */  
-#s-cover:hover span  
-{  
-    top: 50%;  
-    left: 56px;  
-    width: 25px;  
-    margin-top: -9px;  
-    transform: rotateZ(0);  
+.links {  
+  display: flex;  
+  flex-wrap:wrap;  
+  gap: 1rem;  
+  justify-content: center;  
+   margin-top:1rem;   
 }  
-#s-cover:hover button span:before  
-{  
-    bottom: 11px;  
-    transform: rotateZ(52deg);  
+.links .icon {  
+  border: 1px solid transparent;  
+  padding: 1rem 1.5rem;  
+  border-radius: 4px;  
+  transition: 0.2s ease-in-out;  
 }  
-#s-cover:hover button span:after  
-{  
-    bottom: -11px;  
-    transform: rotateZ(-52deg);  
+.links .icon i {  
+  font-size: 1.3rem;  
 }  
-#s-cover:hover button span:before, #s-cover:hover button span:after  
-{  
-    right: 6px;  
-    width: 40px;  
-    background-color: #fff;  
+.links .icon .fa-facebook {  
+  color: blue;  
+    font-size: 1.4rem;  
+    font-weight: 800;  
 }  
-        </style>    
-    </head>    
-    <body>    
-<div id="cover">  
-  <form method="get" action="">  
-<div class="tb">  
-<div class="td">  
-<!-- The following tag is input for the text input field which is used as a seach field on a web page -->  
-<input type="text" placeholder="Search" required></div>  
-      <div class="td" id="s-cover">  
-        <button type="submit">  
-          <div id="s-circle"> </div>  
-          <span> </span>  
-        </button>  
-      </div>  
+.links .icon .fa-twitter {  
+  color: #1da1f2;  
+  font-size: 1.4rem;  
+    font-weight: 800;  
+}  
+.links .icon .fa-google {  
+  color: #db4437;  
+  font-size: 1.4rem;  
+    font-weight: 800;  
+}  
+.links .icon:hover {  
+  border: 1px solid black;  
+}  
+h2 {  
+  text-align: center;  
+  font-weight: normal;  
+  color: #fff;  
+  text-transform: uppercase;  
+  font-size: 2em;  
+  white-space: nowrap;  
+  font-size: 2vw;  
+  z-index: 1000;  
+  font-family: 'Titillium Web', sans-serif;  
+  @include skew(0, -6.7deg, false);  
+  @include transition-property(font-size);  
+  @include transition-duration(0.5s);  
+}  
+h3 {  
+  text-align: center;  
+  font-weight: normal;  
+  color: #fff;  
+  text-transform: uppercase;  
+  font-size: 2em;  
+  white-space: nowrap;  
+  font-size: 1.5vw;  
+  z-index: 1000;  
+  font-family: 'Titillium Web', sans-serif;  
+  @include skew(0, -6.7deg, false);  
+  @include transition-property(font-size);  
+  @include transition-duration(0.5s);  
+}  
+.links a {  
+    border-bottom: 1px dashed #fffafb;  
+    color: #c51c53;  
+    font-size: 14px;  
+    font-weight: bold;  
+    letter-spacing: 0.5px;  
+    padding: 0 2px;  
+}  
+span {  
+  text-align: center;  
+  font-weight: normal;  
+  color: #fff;  
+  text-transform: uppercase;  
+  font-size: 2em;  
+  white-space: nowrap;  
+  font-size: 1vw;  
+  z-index: 1000;  
+  font-family: 'Bangers', cursive;  
+  @include skew(0, -6.7deg, false);  
+  @include transition-property(font-size);  
+  @include transition-duration(0.5s);   
+}  
+@media screen and (max-width:400px) {  
+  .card_container{  
+    width: calc(90% - 1rem);  
+    margin: 2rem 0;  
+  }  
+  .links .icon i {  
+    font-size: .9rem;  
+  }  
+}  
+</style>  
+<body>          
+        <div class = "card_container">  
+  <div class = "card_header">  
+     <h2> Example </h2>  
+        <h3> E-mail Newsletter using CSS </h3>  
+  </div>  
+  <div class = "card_content">  
+    <div class = "input-field">  
+      <input type = "email" id = "email" placeholder = "Enter your email address">  
     </div>  
-  </form>  
-</div>  
-    </body>    
-</html>    
+    <button class = "btn"> Subscribe <i class = "fas fa-arrow-right"> </i> </button>  
+    <span> Or subscribe using </span>  
+    <div class = "links">  
+      <a href = "#" class = "icon">  
+        <i class = "fab fa-google"> </i>  
+      </a>  
+      <a href = "#" class = "icon">  
+        <i class = "fab fa-twitter"> </i>  
+      </a>   
+      <a href = "#" class = "icon">  
+        <i class = "fab fa-facebook"> </i>  
+      </a>  
+    </div>  
+  </div>  
+</body>  
+</html>      
