@@ -1,223 +1,240 @@
 <! DOCTYPE html>  
 <html>  
 <head>  
-<meta charset = "utf-8">  
-        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">  
-        <title> Email Newsletter using CSS </title>  
-        <link rel = "stylesheet" href = "https://codepen.io/gymratpacks/pen/VKzBEp#0">  
-        <link href = 'https://fonts.googleapis.com/css?family=Nunito:400,300' rel = 'stylesheet' type = 'text/css'>  
- <link href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel = "stylesheet">      
+  <meta charset = "UTF-8">  
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">  
+  <meta http-equiv = "X-UA-Compatible" content = "ie=edge">  
+  <title> Example of How to Create Browsers Window using HTML and CSS? </title>  
+<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">  
 <style>  
-* {  
-  margin: 0;  
-  padding: 0;  
-  box-sizing: border-box;  
+@import url(https://fonts.googleapis.com/css?family=Signika);  
+@import url(https://fonts.googleapis.com/css?family=Lobster);  
+body  
+{  
+   background: #191919;  
 }  
-body {  
-  display: flex;  
-  justify-content: center;  
-  align-items: center;  
-  font-family: 'Titillium Web', sans-serif;  
-  background: linear-gradient(125deg, #778beb, #f8a5c2);  
-  min-height: 100vh;  
-}  
-.card_container {  
-  width: 350px;  
-  background: #fff;  
-  border-radius: 15px;  
-}  
-.card_container .card_header {  
-  background-color: #bf5bee;  
-  background-image: linear-gradient(  
-    43deg,  
-    #bf5bee 0%,  
-    #c850c0 46%,  
-    #ffcc70 100%  
-  );  
-  padding: 4rem 1.3rem;  
-  border-radius: 15px 15px 0 0;  
-  text-align: center;  
-}  
-.card_container .card_header h1 {  
-  margin: 0;  
-  padding: 0;  
-  color: #fff;  
-  margin-top: 0.6rem;  
-  font-size: 1.5rem;  
-}  
-.card_container .card_header h1 span {  
-  text-transform: uppercase;  
-}  
-.card_header .text {  
-  color: #fff;  
-  font-size: 0.9rem;  
-}  
-.card_content {  
-  padding: 2rem;  
-  display: flex;  
-  justify-content: center;  
-  gap: 1rem;  
-    align-items:center;   
-  flex-direction: column;  
-}  
-input:focus {  
-    border: 2px solid #011936;  
-    font-weight: 600;  
-}  
-.card_content .input-field input {  
-  width: 100%;  
-  padding: 0.8rem;  
-  border: 1px solid #ccc;  
-  border-radius: 4px;  
-}  
-.card_content .btn {  
-  padding: 0.8rem;  
-  background-color: #bf5bee;  
-  font-family: 'Titillium Web', sans-serif;  
-    font-size: 1.4rem;  
-    font-weight: 800;  
-  background-image: linear-gradient(  
-    43deg,  
-    #bf5bee 0%,  
-    #c850c0 46%,  
-    #ffcc70 100%  
-  );  
-  border: none;  
-  outline: none;  
-  border-radius: 5px;  
-  color: #fff;  
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);  
-  transition: all 0.2s ease-in-out;  
-  cursor: pointer;  
-}  
-.card_content .btn:hover {  
-  box-shadow: 3px 7px 8px rgba(0, 0, 0, 0.2);  
-  cursor: pointer;  
-}  
-.card_content span {  
-  text-align: center;  
-  padding: 1rem 0;  
-  font-size: 0.8rem;  
-  color: gray;  
-  letter-spacing: 1px;  
-}  
-.links {  
-  display: flex;  
-  flex-wrap:wrap;  
-  gap: 1rem;  
-  justify-content: center;  
-   margin-top:1rem;   
-}  
-.links .icon {  
-  border: 1px solid transparent;  
-  padding: 1rem 1.5rem;  
-  border-radius: 4px;  
-  transition: 0.2s ease-in-out;  
-}  
-.links .icon i {  
-  font-size: 1.3rem;  
-}  
-.links .icon .fa-facebook {  
-  color: blue;  
-    font-size: 1.4rem;  
-    font-weight: 800;  
-}  
-.links .icon .fa-twitter {  
-  color: #1da1f2;  
-  font-size: 1.4rem;  
-    font-weight: 800;  
-}  
-.links .icon .fa-google {  
-  color: #db4437;  
-  font-size: 1.4rem;  
-    font-weight: 800;  
-}  
-.links .icon:hover {  
-  border: 1px solid black;  
-}  
-h2 {  
-  text-align: center;  
+h1 {  
   font-weight: normal;  
-  color: #fff;  
-  text-transform: uppercase;  
-  font-size: 2em;  
-  white-space: nowrap;  
-  font-size: 2vw;  
-  z-index: 1000;  
-  font-family: 'Titillium Web', sans-serif;  
-  @include skew(0, -6.7deg, false);  
-  @include transition-property(font-size);  
-  @include transition-duration(0.5s);  
-}  
-h3 {  
-  text-align: center;  
+  font-size: 40px;  
   font-weight: normal;  
-  color: #fff;  
   text-transform: uppercase;  
-  font-size: 2em;  
-  white-space: nowrap;  
-  font-size: 1.5vw;  
-  z-index: 1000;  
-  font-family: 'Titillium Web', sans-serif;  
-  @include skew(0, -6.7deg, false);  
-  @include transition-property(font-size);  
-  @include transition-duration(0.5s);  
+  text-align: center;   
 }  
-.links a {  
-    border-bottom: 1px dashed #fffafb;  
-    color: #c51c53;  
-    font-size: 14px;  
-    font-weight: bold;  
-    letter-spacing: 0.5px;  
-    padding: 0 2px;  
+h2 {   
+text-align: center;   
+color: #46a294;   
+font-size: 28px;   
+width: 100%;  
+ margin: 10px 10;   
+position: relative;   
+line-height: 58px;   
+font-weight: 400;   
 }  
-span {  
-  text-align: center;  
-  font-weight: normal;  
+h2:before {   
+content: " ";   
+position: absolute;   
+left: 50%;   
+bottom: 0;   
+width: 100px;   
+height: 2px;  
+font-weight: bold;  
+ background-color: #2079df;   
+margin-left: -50px;  
+ }  
+.browser  
+{  
+   margin: 10px auto 60px auto;  
+   width: 800px;  
+   height: 400px;  
+   background: white;  
+   border: 6px solid #373C49;  
+   border-radius: 6px;  
+   box-shadow: 20px 20px #cc0044;  
+}  
+.nav  
+{  
+   width: 100%;  
+   height: 40px;  
+   background: #373C49;  
+   cursor: pointer;  
+}  
+.url  
+{  
+   width: 540px;  
+   margin-top: 2px;  
+   margin-left: 40px;  
+   padding: 6px;  
+   background-color: #454B5B;  
+   color: #9299a0;  
+   border-style: solid;  
+   border-width: 1px;  
+   border-color: #373C49;  
+}  
+.url:hover, .url:focus { color: #C5D4D7; }  
+.lt  
+{  
+   font-family: 'Signika';  
+   font-size: 22px;  
+   font-weight: bold;  
+   color: #fff;  
+   margin-left: 20px;  
+}  
+.gt  
+{  
+   font-family: 'Signika';  
+   font-size: 22px;  
+   font-weight: bold;  
+   color: #fff;  
+   margin-left: 20px;  
+}  
+.others  
+{  
+  font-family: 'Signika';  
+  font-size: 16px;  
   color: #fff;  
-  text-transform: uppercase;  
-  font-size: 2em;  
-  white-space: nowrap;  
-  font-size: 1vw;  
-  z-index: 1000;  
-  font-family: 'Bangers', cursive;  
-  @include skew(0, -6.7deg, false);  
-  @include transition-property(font-size);  
-  @include transition-duration(0.5s);   
+  margin-left: 20px;  
 }  
-@media screen and (max-width:400px) {  
-  .card_container{  
-    width: calc(90% - 1rem);  
-    margin: 2rem 0;  
-  }  
-  .links .icon i {  
-    font-size: .9rem;  
-  }  
+.page  
+{  
+   width: 100%;  
+   height: 300px;  
+   background: #FFF;  
+}  
+  
+.h1  
+{  
+   text-align: center;  
+   font-family: 'Lobster';  
+   font-size: 32px;  
+}  
+.bloc  
+{  
+   margin-top: -150px;  
+   margin-left: 60px;  
+   background-color: #0099e6;  
+   width: 160px;  
+   height: 160px;  
+}  
+.line-1  
+{  
+   margin-left: 260px;  
+   background: #b300b2;  
+   width: 220px;  
+   height: 20px;  
+}  
+h1 {    
+  position: relative;    
+  padding: 0;    
+  margin: 0;    
+  font-family: "Raleway", sans-serif;    
+  font-weight: 200;    
+  font-size: 40px;    
+  color: red;    
+  -webkit-transition: all 0.4s ease 0s;    
+  -o-transition: all 0.4s ease 0s;    
+  transition: all 0.4s ease 0s;    
+}    
+.line-2  
+{  
+   margin-top: 20px;  
+   margin-left: 260px;  
+   background: #00e68a;  
+   width: 380px;  
+   height: 10px;  
+}  
+.line-3  
+{  
+   margin-top: 10px;  
+   margin-left: 260px;  
+   background: #00e68a;  
+   width: 420px;  
+   height: 10px;  
+}  
+.line-4  
+{  
+   margin-top: 10px;  
+   margin-left: 260px;  
+   background: #00e68a;  
+   width: 400px;  
+   height: 10px;  
+}  
+.line-5  
+{  
+   margin-top: 10px;  
+   margin-left: 260px;  
+   background: #00e68a;  
+   width: 390px;  
+   height: 10px;  
+}  
+.line-6  
+{  
+   margin-top: 30px;  
+   margin-left: 260px;  
+   background: #ff4d4d;  
+   width: 50px;  
+   height: 10px;  
+}  
+img {  
+  display: block;  
+  width: 160px;  
+}  
+img::before  
+{  
+  content: ' ';  
+  width: 90%;  
+  height: 90%;  
+  background-color: #FFF;  
+  z-index: 2;  
+}  
+.line-7  
+{  
+   margin-top: -10px;  
+   margin-left: 325px;  
+   background: #ff7733;  
+   width: 50px;  
+   height: 10px;  
+}  
+.frame-bottom {  
+  background: #853d2d;  
+  font-size: 22px;  
+  padding-top: 7px;  
+  padding-left: 15px;  
+  position: absolute;  
+  bottom: 10;  
+  left: 0;  
+  color: #888888;  
+  width: 98.5%;  
+  height: 32px;  
+  z-index: 100;  
 }  
 </style>  
-<body>          
-        <div class = "card_container">  
-  <div class = "card_header">  
-     <h2> Example </h2>  
-        <h3> E-mail Newsletter using CSS </h3>  
-  </div>  
-  <div class = "card_content">  
-    <div class = "input-field">  
-      <input type = "email" id = "email" placeholder = "Enter your email address">  
+<body>  
+<h1> Example </h1>  
+        <h2> How to Create Browsers Window using HTML and CSS? </h2>  
+<div class = "browser">  
+   <div class = "nav">  
+      <span class = "lt"> < </span>  
+      <span class = "gt"> > </span>  
+      <span class = "others"> <i class = "fa fa-refresh"> </i> </span>  
+      <input type = "text" class = "url" placeholder = "https://www.javatpoint.com/"/>  
+      <span class = "others"> <i class = "fa fa-heart"> </i> </span>  
+      <span class = "others"> <i class = "fa fa-cog"> </i> </span>  
+   </div>  
+   <div class = "page">  
+      <p class = "h1"> Welcome </p>  
+      <div class = "line-1"> A Computer Science Portal </div>  
+      <div class = "line-2"> providing Online Training </div>  
+      <div class = "line-3"> for Web Development Courses </div>  
+      <div class = "line-4"> </div>  
+      <div class = "line-5"> </div>  
+      <div class = "line-6"> </div>  
+      <div class = "line-7"> </div>  
+      <div class = "bloc"> <img src = "4.png"> </div>  
+   </div>  
+   <div class = "frame-bottom">  
+      Javatpoint  
     </div>  
-    <button class = "btn"> Subscribe <i class = "fas fa-arrow-right"> </i> </button>  
-    <span> Or subscribe using </span>  
-    <div class = "links">  
-      <a href = "#" class = "icon">  
-        <i class = "fab fa-google"> </i>  
-      </a>  
-      <a href = "#" class = "icon">  
-        <i class = "fab fa-twitter"> </i>  
-      </a>   
-      <a href = "#" class = "icon">  
-        <i class = "fab fa-facebook"> </i>  
-      </a>  
-    </div>  
-  </div>  
+</div>  
 </body>  
-</html>      
+</html>   
+
